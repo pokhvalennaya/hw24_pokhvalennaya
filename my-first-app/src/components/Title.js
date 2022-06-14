@@ -1,9 +1,7 @@
-import "./Title.css";
+const Title = ({ name, type = "normal" }) => {
+  const fontWeight = type === "bold" ? "bold" : "normal";
 
-const Title = ({ name, type }) => {
-  const className = type === "bold" ? "bold" : "normal" ? "normal" : "";
-
-  return <h1 className={className}>It's {name}'s first react app</h1>;
+  return <h1 style={{ fontWeight }}>It's {name}'s first react app</h1>;
 };
 
 export default Title;
